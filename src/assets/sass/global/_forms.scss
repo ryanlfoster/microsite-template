@@ -1,0 +1,188 @@
+/* Forms
+   ========================================================================== */
+
+form {
+    margin: 1em 0;
+}
+
+/* define consistent fieldset margin, border and padding */
+fieldset {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    min-width: 0; // address width being affected by wide descendants in Chrome and Firefox
+    
+    p {
+        margin-top: 0;
+    }
+}
+
+/* remove padding so people aren't caught out if they zero out fieldsets */
+legend {
+    margin: 1em 0;
+    border: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    @include box-sizing;
+
+    /* correct font size not being inherited in all browsers */
+    font-size: 100%;
+    @include adjust-font-size-to(13px, 0.8);
+
+    margin: 0; // address margins set differently in Firefox4+, Safari5+ and Chrome
+    max-width: 100%; // prevent elements from spilling out of their parent
+    font-family: $global-font;
+    vertical-align: baseline;
+}
+
+/* colour placeholder text */
+input,
+textarea {
+    @include input-placeholder {
+        color: $global-color-text-footnote;
+    }
+}
+
+/* remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* remove inner padding and search cancel button in Safari5+ and Chrome on OS X */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select,
+textarea {
+    @include border-radius(0);
+    @include transition(box-shadow 0.2s linear);
+
+    -webkit-appearance: none; // remove iOS Safari default styling
+    border: 1px solid $global-color-border;
+    padding: 0.5384615em 0.4em;
+    height: 2.4615384em; // 32px / 13px
+    color: $global-color-text;
+    background: $global-color-background;
+
+    &:focus {
+        @include box-shadow(0 0 4px 2px $global-color-link-focus);
+
+        border-color: $global-color-link-focus;
+        outline: 0;
+
+        @include breakpoint(max-width $breakpoint-2) {
+            /* make focussed form element text on mobile 16px, to avoid auto-zooming */
+            font-size: 16px;
+            line-height: 1.375;
+        }
+    }
+}
+
+/* fix the cursor style for Chrome's increment/decrement buttons */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/* address excess padding in IE8-9 */
+input[type="checkbox"],
+input[type="radio"] {
+    padding: 0;
+}
+
+/* address inconsistent `text-transform` inheritance for `select` in Firefox 4+ and Opera */
+select {
+    text-transform: none;
+}
+
+select[size],
+select[multiple] {
+    height: auto;
+}
+
+select[size="0"],
+select[size="1"] {
+    height: 2.4615384em; // 32px / 13px
+}
+
+/* address `<select>` alignment in Safari/Chrome */
+@media (-webkit-min-device-pixel-ratio: 0) {
+
+    select[size],
+    select[multiple],
+    select[multiple][size] {
+        padding-right: 0.5384615; // 7px / 13px
+        background-image: none;
+    }
+
+    select,
+    select[size="0"],
+    select[size="1"] {
+        padding-right: 2em;
+        background: $global-color-background url("data:image/svg+xml,<svg version='1.1' baseProfile='full' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='13px' height='4px' viewBox='0 0 13 4' enable-background='new 0 0 13 4' xml:space='preserve'><polygon fill='#333333' points='3.5,4 0,0 7,0'/></svg>") no-repeat right center;
+        background-size: 1em 0.30769em;
+    }
+
+}
+
+optgroup {
+    font-style: normal;
+    font-weight: bold;
+    color: $global-color-text;
+
+    &::-moz-focus-inner { // kill phantom spacing and dotted border that appears in Firefox
+        border: 0;
+        padding: 0;
+    }
+}
+
+textarea {
+    height: auto;
+    min-height: 3em;
+    overflow: auto; // remove default vertical scrollbar in IE8-9
+    resize: vertical;
+    width: 100%;
+}
+
+/* make sure disable elements really are disabled */
+button[disabled],
+html input[disabled], // `html` is a workaround for Android 4 bug
+input[type="button"][disabled],
+input[type="reset"][disabled],
+input[type="submit"][disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled] {
+    opacity: 1; // overrides iOS opacity setting
+    border-color: lighten($global-color-border, 9%) !important;
+    color: #aaaaaa !important;
+    background: #eeeeee !important;
+    text-shadow: none !important;
+    cursor: default !important;
+}

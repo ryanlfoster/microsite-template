@@ -1,0 +1,39 @@
+/* Social media
+   ========================================================================== */
+
+.global-social-channels {
+    list-style: none;
+    padding: 0;
+
+    li {
+        display: inline-block;
+        margin-right: 0.7em;
+    }
+
+    a {
+        @include hide-text;
+
+        display: block;
+        width: 32px;
+        height: 32px;
+        background: url("../img/icon32-sprite.svg") no-repeat;
+        background-size: 320px 32px;
+
+        // don't need Facebook rule since default is `background-position: 0 0` anyway
+        &.global-googleplus {
+            background-position: -32px 0;
+        }
+
+        &.global-twitter {
+            background-position: -64px 0;
+        }
+
+        &.global-youtube {
+            background-position: -96px 0;
+        }
+
+        &:hover {
+            @include filter(#{"brightness(1.1)"}); // temporary workaround for Sass/Compass bug when using @include filter(brightness(1.1));
+        }
+    }
+}

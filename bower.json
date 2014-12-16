@@ -1,0 +1,10 @@
+{
+  "name": "microsite-template",
+  "directory": "bower_components",
+  "dependencies": {
+    "iscroll": "5.1.1",
+    "jquery.stellar": "0.6.2",
+    "responsive-nav": "1.0.32",
+    "requirejs": "2.1.15"
+  }
+}

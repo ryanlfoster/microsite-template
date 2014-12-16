@@ -1,0 +1,99 @@
+/* Layout
+   ========================================================================== */
+
+html {
+    -webkit-tap-highlight-color: rgba($global-color-link, 0.5);
+    /* always force scrollbar padding so we don't get 'jumping' */
+    overflow-y: scroll;
+    /* prevent iOS text size adjust after orientation change, without disabling user zoom */
+    -webkit-text-size-adjust: 100%;
+    /* as above, for Windows Phone */
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    color: $global-color-text;
+    background: $global-color-background;
+}
+
+.global-wrapper {
+    position: relative;
+}
+
+header,
+footer,
+.global-container {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    max-width: $container-max-width;
+}
+
+.global-header {
+    @include box-shadow(0 0.2em 0.25em rgba(#000000, 0.2));
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-top: 1px solid $global-color-border;
+    border-bottom: 1px solid $global-color-border;
+    background-color: $global-color-header;
+}
+
+@include breakpoint($breakpoint-2) {
+    .global-brand-logo {
+        float: left;
+    }
+}
+
+.global-footer {
+    background-color: $global-color-footer;
+}
+
+.global-main {
+    padding-top: 3em;
+    border-bottom: 1px solid $global-color-border;
+}
+
+.global-contact-telephone,
+.global-contact-email {
+    @include adjust-font-size-to(16px, 1.1);
+
+    margin: 0.5em 0;
+
+    b {
+        @include hide-text;
+
+        position: relative;
+        top: -0.3333333em;
+        display: inline-block;
+        margin-right: 0.3333333em;
+        width: 32px;
+        height: 32px;
+        background: url("../img/icon32-sprite.svg") no-repeat;
+        background-size: 320px 32px;
+    }
+}
+
+.global-contact-telephone b {
+    background-position: -256px 0;
+}
+
+.global-contact-email b {
+    background-position: -288px 0;
+}
+
+/* Accessibility
+   ========================================================================== */
+
+/* hide text but still allow screen reader access */
+.global-accessibility {
+    position: absolute;
+    left: -1000em;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}

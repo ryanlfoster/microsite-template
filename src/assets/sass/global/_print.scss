@@ -1,0 +1,207 @@
+@media print {
+
+* {
+    @include box-shadow(none !important);
+
+    color: black !important; // black prints faster
+    text-shadow: none !important;
+    background: transparent !important;
+}
+
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 8pt;
+    line-height: 1.5;
+    margin: 0.5cm;
+    padding: 2em 5em;
+}
+
+header {
+    border-bottom: solid 1pt black;
+}
+
+/* hide unnecessary content from print */
+nav,
+audio,
+video,
+form,
+footer,
+[role="complementary"] {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* show URLs for certain links in print */
+a[href]:after {
+    content: " (" attr(href) ")";
+}
+
+h1 a[href],
+h2 a[href],
+h3 a[href],
+h4 a[href],
+h5 a[href],
+h6 a[href],
+sup a[href] {
+    &:after {
+        content: "";
+    }
+}
+
+/* show long-form for abbreviations in print */
+abbr[title] {
+    &:after {
+        content: " (" attr(title) ")";
+    }
+}
+
+h1 {
+    font-size: 32pt;
+    line-height: 36pt;
+    font-weight: normal;
+    margin: 16pt 0;
+}
+
+h2 {
+    font-size: 24pt;
+    line-height: 28pt;
+    page-break-after: avoid;
+    orphans: 2;
+    widows: 2;
+    margin: 14pt 0;
+}
+
+h3 {
+    font-size: 18pt;
+    line-height: 22pt;
+    page-break-after: avoid;
+    orphans: 2;
+    widows: 2;
+    margin: 12pt 0;
+}
+
+h4 {
+    font-size: 14pt;
+    line-height: 18pt;
+    page-break-after: avoid;
+    orphans: 2;
+    widows: 2;
+    margin: 11pt 0;
+}
+
+h5 {
+    font-size: 12pt;
+    line-height: 16pt;
+    page-break-after: avoid;
+    orphans: 2;
+    widows: 2;
+    margin: 10pt 0;
+}
+
+h6 {
+    font-size: 10pt;
+    line-height: 14pt;
+    page-break-after: avoid;
+    orphans: 2;
+    widows: 2;
+    margin: 9pt 0;
+}
+
+p {
+    orphans: 2;
+    widows: 2;
+}
+
+figcaption,
+tfoot,
+small {
+    font-size: 6pt;
+}
+
+blockquote {
+    font-size: 16pt;
+    border-left: 3pt solid black;
+    padding: 0 0 0 8pt;
+    page-break-inside: avoid;
+}
+
+pre {
+    margin-bottom: 8pt;
+    border: solid 1pt black;
+    padding: 8pt;
+}
+
+pre,
+code,
+kbd,
+samp,
+var {
+    font-family: "Courier New", Courier, monospace;
+}
+
+dfn,
+q,
+dt {
+    font-style: italic;
+}
+
+img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+}
+
+figure {
+    margin-bottom: 8pt;
+}
+
+figcaption {
+    margin-top: 4pt;
+}
+
+ul {
+    list-style: square;
+    margin: 0 0 8pt 1.8em;
+}
+
+ol {
+    list-style: decimal;
+    margin: 0 0 8pt 1.8em;
+}
+
+dl {
+    margin: 0 0 8pt 1.8em;
+}
+
+table {
+    margin-bottom: 8pt;
+    width: 100%;
+}
+
+caption {
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 4pt;
+}
+
+/* display table head across multi-page tables */
+thead {
+    display: table-header-group;
+    th {
+        border-top: solid 1pt black;
+    }
+}
+
+tr {
+    page-break-inside: avoid;
+}
+
+th,
+td {
+    border-bottom: solid 1pt black;
+    padding: 4pt 8pt;
+}
+
+}

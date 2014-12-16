@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+<head>
+    <meta charset="utf-8">
+    <title>SITE NAME HERE</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow, noodp, noydir">
+    <meta name="application-name" content="SITE NAME HERE">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="mstile-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57-precomposed.png">
+    <link rel="icon" sizes="196x196" href="favicon-196x196.png">
+    <link rel="icon" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" sizes="16x16" href="favicon-16x16.png">
+
+<!-- CSS -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/local.css">
+
+<!-- Fix IE8 -->
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+        <link rel="stylesheet" href="assets/css/global-ie8.css">
+        <link rel="stylesheet" href="assets/css/local-ie8.css">
+    <![endif]-->
+
+
+<!-- JUST FOR THIS DESIGN PATTERNS DOC - NOT IN ACTUAL SITE -->
+<style>
+    .temporary-box { background-color: #cccccc; margin-top: 0; padding: 1em; }
+    .global-information { clear: both; }
+</style>
+
+</head>
+
+<body id="global-top">
+    <div class="global-wrapper global-header">
+
+    <!-- Global Header DO NOT CHANGE STRUCTURE -->
+        <header role="banner">
+
+            <!-- Brand logo - must be 128px wide x 32px high -->
+            <img class="global-brand-logo global-svg" src="img/brand-logo.svg" alt="Brand name here">
+
+            <nav role="navigation" class="nav-collapse" aria-label="Page navigation">
+                <ul>
+                    <li><a href="#anchor-1">Anchor 1</a></li>
+                    <li><a href="#anchor-2">Anchor 2</a></li>
+                    <li><a href="#anchor-3">Anchor 3</a></li>
+                    <li><a href="#anchor-4">Anchor 4</a></li>
+                    <li><a href="#anchor-5">Anchor 5</a></li>
+                </ul>
+            </nav>
+
+            <nav role="navigation" class="nav-secondary" aria-label="Secondary navigation">
+                <ul>
+                    <li><a class="global-share" href="#">Share</a></li>
+                    <!--<li><a class="global-buy" href="#">Buy</a></li>-->
+                    <li><a class="global-top" href="#global-top">Go to top of page</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+    </div><!-- /.global-wrapper -->
+
+<!-- Content -->
+    <div class="global-wrapper global-main">
+
+        <!-- YOU CAN CHANGE FROM HERE ONWARDS -->
+        <main role="main">
+
+            <div class="global-wrapper-inner">
+                <div class="global-container">
+                    <h1 itemprop="name">Layout grid example</h1>
+                    <p>Grid layout with 1 to 4 column options. Uses the <a href="http://singularity.gs" rel="external" title="Go to the Singularity website">Singularity</a> grid system.</p>
+
+
+                    <h2 id="anchor-1">Main layout grid</h2>
+                    <p>The main layout grid blocks used for layout throughout the site.</p>
+
+                    <div class="global-clearfix"><!-- this `div` is just for clearfix child elements in this design patterns doc -->
+
+                        <p class="global-information">Opt1: 1col <code>class="layout--span-1-12"</code></p>
+
+                        <div class="global-layout--span-1-12"><p class="temporary-box">Opt1: 1col</p></div>
+
+                        <p class="global-information">Opt2: 2col cell1 <code>class="layout--span-1-6 at-break2"</code><br>
+                            Opt2: 2col cell2 <code>class="layout--span-7-12 at-break2"</code></p>
+
+                        <div class="global-layout--span-1-6 at-break2"><p class="temporary-box">Opt2: 2col cell1</p></div>
+                        <div class="global-layout--span-7-12 at-break2"><p class="temporary-box">Opt2: 2col cell2</p></div>
+
+                        <p class="global-information">Opt3: 3col cell1 <code>class="layout--span-1-4"</code><br>
+                            Opt3: 3col cell2 <code>class="layout--span-5-8"</code><br>
+                            Opt3: 3col cell3 <code>class="layout--span-9-12"</code></p>
+
+                        <div class="global-layout--span-1-4"><p class="temporary-box">Opt3: 3col cell1</p></div>
+                        <div class="global-layout--span-5-8"><p class="temporary-box">Opt3: 3col cell2</p></div>
+                        <div class="global-layout--span-9-12"><p class="temporary-box">Opt3: 3col cell3</p></div>
+
+                        <p class="global-information">Opt4: 3col cell1and2 <code>class="layout--span-1-8"</code><br>
+                            Opt4: 3col cell3 <code>class="layout--span-9-12"</code></p>
+
+                        <div class="global-layout--span-1-8"><p class="temporary-box">Opt4: 3col cell1and2</p></div>
+                        <div class="global-layout--span-9-12"><p class="temporary-box">Opt4: 3col cell3</p></div>
+
+                        <p class="global-information">Opt5: 3col cell1 <code>class="layout--span-1-4"</code><br>
+                            Opt5: 3col cell2and3 <code>class="layout--span-5-12"</code></p>
+
+                        <div class="global-layout--span-1-4"><p class="temporary-box">Opt5: 3col cell1</p></div>
+                        <div class="global-layout--span-5-12"><p class="temporary-box">Opt5: 3col cell2and3</p></div>
+
+                        <p class="global-information">Opt6: 4col cell1 <code>class="layout--span-1-3 global-at-break1"</code><br>
+                            Opt6: 5col cell2 <code>class="layout--span-4-6 global-at-break1"</code><br>
+                            Opt6: 6col cell3 <code>class="layout--span-7-9 global-at-break1"</code><br>
+                            Opt6: 7col cell4 <code>class="layout--span-10-12 global-at-break1"</code></p>
+
+                        <div class="global-layout--span-1-3 global-at-break1"><p class="temporary-box">Opt6: 4col cell1</p></div>
+                        <div class="global-layout--span-4-6 global-at-break1"><p class="temporary-box">Opt6: 5col cell2</p></div>
+                        <div class="global-layout--span-7-9 global-at-break1"><p class="temporary-box">Opt6: 6col cell3</p></div>
+                        <div class="global-layout--span-10-12 global-at-break1"><p class="temporary-box">Opt6: 7col cell4</p></div>
+
+                        <p class="global-information">Opt7: 4col cell1and2 <code>class="layout--span-1-6"</code><br>
+                            Opt7: 4col cell3 <code>class="layout--span-7-9 global-at-break1"</code><br>
+                            Opt7: 4col cell4 <code>class="layout--span-10-12 global-at-break1"</code></p>
+
+                        <div class="global-layout--span-1-6"><p class="temporary-box">Opt7: 4col cell1and2</p></div>
+                        <div class="global-layout--span-7-9 global-at-break1"><p class="temporary-box">Opt7: 4col cell3</p></div>
+                        <div class="global-layout--span-10-12 global-at-break1"><p class="temporary-box">Opt7: 4col cell4</p></div>
+
+                        <p class="global-information">Opt8: 4col cell1 <code>class="layout--span-1-3"</code><br>
+                            Opt8: 4col cell2and3 <code>class="layout--span-4-9"</code><br>
+                            Opt8: 4col cell4 <code>class="layout--span-10-12"</code></p>
+
+                        <div class="global-layout--span-1-3"><p class="temporary-box">Opt8: 4col cell1</p></div>
+                        <div class="global-layout--span-4-9"><p class="temporary-box">Opt8: 4col cell2and3</p></div>
+                        <div class="global-layout--span-10-12"><p class="temporary-box">Opt8: 4col cell4</p></div>
+
+                        <p class="global-information">Opt9: 4col cell1 <code>class="layout--span-1-3"</code><br>
+                            Opt9: 4col cell2 <code>class="layout--span-4-6"</code><br>
+                            Opt9: 4col cell3and4 <code>class="layout--span-7-12"</code></p>
+
+                        <div class="global-layout--span-1-3"><p class="temporary-box">Opt9: 4col cell1</p></div>
+                        <div class="global-layout--span-4-6"><p class="temporary-box">Opt9: 4col cell2</p></div>
+                        <div class="global-layout--span-7-12"><p class="temporary-box">Opt9: 4col cell3and4</p></div>
+
+                        <p class="global-information">Opt10: 4col cell1and2and3 <code>class="layout--span-1-9"</code><br>
+                            Opt10: 4col cell4 <code>class="layout--span-10-12"</code></p>
+
+                        <div class="global-layout--span-1-9"><p class="temporary-box">Opt10: 4col cell1and2and3</p></div>
+                        <div class="global-layout--span-10-12"><p class="temporary-box">Opt10: 4col cell4</p></div>
+
+                        <p class="global-information">Opt11: 4col cell1 <code>class="layout--span-1-3"</code><br>
+                            Opt11: 4col cell2and3and4 <code>class="layout--span-4-12"</code></p>
+
+                        <div class="global-layout--span-1-3"><p class="temporary-box">Opt11: 4col cell1</p></div>
+                        <div class="global-layout--span-4-12"><p class="temporary-box">Opt11: 4col cell2and3and4</p></div>
+
+                    </div><!-- this `/div` is just for clearfix child elements in this design patterns doc -->
+
+
+                    <h2 id="anchor-2">Nested item containers</h2>
+                    <p>For dynamically generated nested items within a grid - powered by <code>:nth-child</code> CSS rules.</p>
+
+                    <div class="global-clearfix"><!-- this `div` is just for clearfix child elements in this design patterns doc -->
+
+                        <div class="global-layout--span-1-8">
+                            <p class="global-information">2 nested columns over &frac23; page span <code>class="global-nested-list-2-column"</code></p>
+                            <div class="global-nested-list-2-column">
+                                <article class="global-nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                    <p class="temporary-box">Column 1</p>
+                                </article>
+                                <article class="global-nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                    <p class="temporary-box">Column 2</p>
+                                </article>
+                                <article class="global-nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                    <p class="temporary-box">Column 3</p>
+                                </article>
+                                <article class="global-nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                    <p class="temporary-box">Column 4</p>
+                                </article>
+                                <article class="global-nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                    <p class="temporary-box">Column 5</p>
+                                </article>
+                            </div>
+                        </div>
+
+                        <p class="global-information">3 nested columns over full page span <code>class="global-nested-list-3-column"</code></p>
+                        <div class="global-nested-list-3-column">
+
+                            <article class="global-nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                <p class="temporary-box">Column 1</p>
+                            </article>
+
+                            <article class="global-nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                <p class="temporary-box">Column 2</p>
+                            </article>
+
+                            <article class="global-nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                <p class="temporary-box">Column 3</p>
+                            </article>
+
+                            <article class="global-nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                <p class="temporary-box">Column 4</p>
+                            </article>
+
+                            <article class="global-nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                <p class="temporary-box">Column 5</p>
+                            </article>
+
+                        </div>
+
+                        <p class="global-information">4 nested columns over full page span <code>class="global-nested-list-4-column"</code></p>
+                        <div class="global-nested-list-4-column">
+                            <article class="global-nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                <p class="temporary-box">Column 1</p>
+                            </article>
+
+                            <article class="global-nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                <p class="temporary-box">Column 2</p>
+                            </article>
+
+                            <article class="global-nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                <p class="temporary-box">Column 3</p>
+                            </article>
+
+                            <article class="global-nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                <p class="temporary-box">Column 4</p>
+                            </article>
+
+                            <article class="global-nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                <p class="temporary-box">Column 5</p>
+                            </article>
+                        </div>
+
+                    </div><!-- this `/div` is just for clearfix child elements in this design patterns doc -->
+
+
+                    <h2 id="anchor-3">Anchor 3</h2>
+                    <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no. Causae option accusamus in est. Mea id ignota meliore facilis, cu vim omnium appareat mediocrem. Eu oblique voluptua electram his. Mei eu movet recteque. Vis nulla graeci praesent ad, mediocrem expetenda pro ad.</p>
+                    <p>Timeam mentitum an nam. Mei ne prima perfecto adversarium. Quo eu tamquam invidunt verterem, albucius dissentiet ea eum. Facete fabellas referrentur et qui. Cu harum tempor vivendum vel. Nec quem movet nullam in. No stet tota pri.</p>
+                    <p>Inermis indoctum vis in, has soleat complectitur te. Ut est stet civibus, mucius iriure ad duo. Sumo tantas et est, ea duo elitr utroque, ne mea dicant tincidunt scribentur. Sit dico accusata et. Sint inimicus cu nam, odio velit minim sit ut.</p>
+                    <p>Ne sea soluta voluptatum. Ut nec augue disputationi, unum utamur vis in. Ea menandri persecuti dissentiunt usu, causae equidem quo ea. Possit gubergren at mea. Sed an erant movet accusata.</p>
+                    <p>Ex graeci civibus eleifend vim, mel et utroque fastidii. Sed eu omnis disputando, voluptatum appellantur vix an. Exerci detracto at his, at illud debitis vis, augue congue inimicus his ei. Cetero intellegat ius an. Eu sed nobis tation, erant elaboraret eam at.</p>
+
+
+                    <h2 id="anchor-4">Anchor 4</h2>
+                    <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no. Causae option accusamus in est. Mea id ignota meliore facilis, cu vim omnium appareat mediocrem. Eu oblique voluptua electram his. Mei eu movet recteque. Vis nulla graeci praesent ad, mediocrem expetenda pro ad.</p>
+                    <p>Timeam mentitum an nam. Mei ne prima perfecto adversarium. Quo eu tamquam invidunt verterem, albucius dissentiet ea eum. Facete fabellas referrentur et qui. Cu harum tempor vivendum vel. Nec quem movet nullam in. No stet tota pri.</p>
+                    <p>Inermis indoctum vis in, has soleat complectitur te. Ut est stet civibus, mucius iriure ad duo. Sumo tantas et est, ea duo elitr utroque, ne mea dicant tincidunt scribentur. Sit dico accusata et. Sint inimicus cu nam, odio velit minim sit ut.</p>
+                    <p>Ne sea soluta voluptatum. Ut nec augue disputationi, unum utamur vis in. Ea menandri persecuti dissentiunt usu, causae equidem quo ea. Possit gubergren at mea. Sed an erant movet accusata.</p>
+                    <p>Ex graeci civibus eleifend vim, mel et utroque fastidii. Sed eu omnis disputando, voluptatum appellantur vix an. Exerci detracto at his, at illud debitis vis, augue congue inimicus his ei. Cetero intellegat ius an. Eu sed nobis tation, erant elaboraret eam at.</p>
+
+
+                    <h2 id="anchor-5">Anchor 5</h2>
+                    <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no. Causae option accusamus in est. Mea id ignota meliore facilis, cu vim omnium appareat mediocrem. Eu oblique voluptua electram his. Mei eu movet recteque. Vis nulla graeci praesent ad, mediocrem expetenda pro ad.</p>
+                    <p>Timeam mentitum an nam. Mei ne prima perfecto adversarium. Quo eu tamquam invidunt verterem, albucius dissentiet ea eum. Facete fabellas referrentur et qui. Cu harum tempor vivendum vel. Nec quem movet nullam in. No stet tota pri.</p>
+                    <p>Inermis indoctum vis in, has soleat complectitur te. Ut est stet civibus, mucius iriure ad duo. Sumo tantas et est, ea duo elitr utroque, ne mea dicant tincidunt scribentur. Sit dico accusata et. Sint inimicus cu nam, odio velit minim sit ut.</p>
+                    <p>Ne sea soluta voluptatum. Ut nec augue disputationi, unum utamur vis in. Ea menandri persecuti dissentiunt usu, causae equidem quo ea. Possit gubergren at mea. Sed an erant movet accusata.</p>
+                    <p>Ex graeci civibus eleifend vim, mel et utroque fastidii. Sed eu omnis disputando, voluptatum appellantur vix an. Exerci detracto at his, at illud debitis vis, augue congue inimicus his ei. Cetero intellegat ius an. Eu sed nobis tation, erant elaboraret eam at.</p>
+
+
+                </div><!-- /.global-container -->
+            </div><!-- /.global-wrapper-inner -->
+
+        </main>
+        <!-- YOU CANNOT CHANGE FROM HERE ONWARDS -->
+
+    </div><!-- /.global-wrapper -->
+
+    <div class="global-wrapper global-footer">
+
+    <!-- Global Footer DO NOT CHANGE -->
+        <footer role="contentinfo">
+
+            <div class="global-layout--span-1-3 global-at-break1">
+                <h5>About us</h5>
+                <p><img class="global-svg" src="img/website-logo.svg" alt="Website name here"></p>
+                <p>Vis nulla graeci praesent ad, mediocrem expetenda pro ad.</p>
+            </div>
+
+            <div class="global-layout--span-4-6 global-at-break1" itemscope itemtype="http://schema.org/Organization">
+                <h5>Contact us</h5>
+                <p itemprop="contactPoint" class="global-contact-telephone"><b itemprop="name">Telephone</b> <span itemprop="telephone">+33 555 269 78</span></p>
+                <p itemprop="contactPoint" class="global-contact-email"><b itemprop="name">Email</b> <a href="mailto:anon@example.com" itemprop="email">Send us a mail</a></p>
+            </div>
+
+            <div class="global-layout--span-7-9 global-at-break1">
+                <h5>General product info</h5>
+                <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no. Causae option accusamus in est. Mea id ignota meliore facilis, cu vim omnium appareat mediocrem. Eu oblique voluptua electram his. Mei eu movet recteque - mei ne prima perfecto adversarium.</p>
+            </div>
+
+            <div class="global-layout--span-10-12 global-at-break1">
+                <ul class="global-social-channels">
+                    <li><a rel="external" class="global-facebook" href="#">Facebook</a></li>
+                    <li><a rel="external" class="global-googleplus" href="#">Google+</a></li>
+                    <li><a rel="external" class="global-twitter" href="#">Twitter</a></li>
+                    <li><a rel="external" class="global-youtube" href="#">YouTube</a></li>
+                </ul>
+                <h5>Newsletter</h5>
+                <p>Timeam mentitum an nam. Mei ne prima perfecto adversarium.</p>
+                <form method="get" action="#" class="global-form-newsletter">
+                    <input type="text" placeholder="Your email"><button type="submit" value="OK"><span>OK</span></button>
+                </form>
+            </div>
+
+        </header>
+
+    </div><!-- /.global-wrapper -->
+
+<!-- JavaScript -->
+    <script data-main="assets/js/global.js" src="assets/js/require.js"></script>
+
+</body>
+</html>

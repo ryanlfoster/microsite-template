@@ -1,0 +1,40 @@
+/* Links
+   ========================================================================== */
+
+a {
+    text-decoration: none;
+    color: $global-color-link;
+    background-color: transparent; // remove the gray background color from active links in IE10
+
+    // improve readability when focused and also mouse hovered in all browsers
+    &:hover,
+    &:active {
+        outline: 0;
+        text-decoration: underline;
+        color: $global-color-link-hover;
+    }
+
+    &:focus {
+        outline: thin dotted $global-color-link-focus;
+    }
+
+    &:visited {
+        color: $global-color-link-visited;
+    }
+}
+
+/* only target phone numbers you want clickable and stop mobile phones from linking other
+   numbers that look like, but are not phone numbers - use attribute `itemprop="telephone"`
+   to apply to the numbers you require linked and styled */
+a[href^="tel"],
+a[href^="sms"] {
+    color: $global-color-text;
+    pointer-events: none;
+    cursor: default;
+
+    [itemprop="telephone"] & {
+        color: $global-color-link;
+        pointer-events: auto;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,58 @@
+/* correct block display not defined in IE8-9 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/* correct `<summary>` not showing as clickable */
+summary {
+    cursor: pointer;
+}
+
+/* address `[hidden]` styling not present in IE8-9
+   hide the `template` element in IE, Safari, and Firefox < 22 */
+[hidden],
+template {
+    display: none;
+}
+
+/* set correct display for `progress` in IE8-9
+   improve vertical alignment of `progress` in Chrome, Firefox, and Opera */
+progress {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+/* remove tap delay in IE10+ */
+a,
+input,
+button {
+    -ms-touch-action: none;
+}
+
+
+/* Clearfix
+   ========================================================================== */
+
+header,
+footer,
+form,
+[role="navigation"] ul,
+[role="navigation"] ol,
+.global-clearfix,
+.global-container,
+.global-nested-list-2-column,
+.global-nested-list-3-column,
+.global-nested-list-4-column {
+    @include pie-clearfix;
+}

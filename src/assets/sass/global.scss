@@ -1,0 +1,42 @@
+// import global variables
+@import "global/settings";
+
+// import Compass, Compass Plugins and any additional mixins
+@import "global/helpers";
+
+
+
+/* ==========================================================================
+   Global styling and layout for all media
+   ========================================================================== */
+
+@import "global/base";
+@import "global/grid";
+
+
+
+/* ==========================================================================
+   Global styling and layout for screen media
+   ========================================================================== */
+
+@media screen {
+
+@import "global/typography";
+@import "global/links";
+@import "global/embedded-content";
+@import "global/forms";
+@import "global/buttons";
+@import "global/layout";
+@import "global/navigation";
+@import "global/alerts";
+@import "global/social";
+
+}
+
+
+
+/* ==========================================================================
+   Global styling and layout for print media
+   ========================================================================== */
+
+@import "global/print";

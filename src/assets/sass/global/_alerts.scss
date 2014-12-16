@@ -1,0 +1,56 @@
+/* Alert messages
+   ========================================================================== */
+
+/* label colours */
+
+.global-success,
+.global-warning,
+.global-error,
+.global-information {
+    @include border-radius(0.2307692em); // 3px / 13px
+
+    padding: 1px 0.2307692em; // 3px / 13px
+}
+
+.global-success {
+    color: $global-color-success-text;
+    background: $global-color-success-background;
+}
+
+.global-warning {
+    color: $global-color-warning-text;
+    background: $global-color-warning-background;
+}
+
+.global-error {
+    color: $global-color-error-text;
+    background: $global-color-error-background;
+}
+
+.global-information {
+    color: $global-color-info-text;
+    background: $global-color-info-background;
+}
+
+/* alert boxes */
+
+.global-alert-block {
+    border: 1px solid;
+    padding: 0.5384615em 1em; // 7px / 13px
+
+    &.global-success {
+        border-color: $global-color-success-border;
+    }
+
+    &.global-warning {
+        border-color: $global-color-warning-border;
+    }
+
+    &.global-error {
+        border-color: $global-color-error-border;
+    }
+
+    &.global-information {
+        border-color: $global-color-info-border;
+    }
+}

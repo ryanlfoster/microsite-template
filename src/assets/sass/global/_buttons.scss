@@ -1,0 +1,49 @@
+/* Buttons
+   ========================================================================== */
+
+/* address inconsistent `text-transform` inheritance for `button` in Chrome, Safari5+, and IE6+
+   address `overflow` set to `hidden` in IE8-10. */
+button {
+    text-transform: none;
+    overflow: visible;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    @include border-radius(0); // remove iOS Safari default border radius
+    @include background-clip;
+    @include transition(box-shadow 0.2s linear);
+
+    -webkit-appearance: none; // remove iOS Safari default styling
+    display: inline-block;
+    border: solid 1px $global-color-button;
+    padding: 0.5384615em 0.4em;
+    width: auto;
+    height: 2.4615384em; // 32px / 13px
+    font-weight: normal;
+    text-align: center;
+    color: $global-color-text-inverse;
+    cursor: pointer;
+    background-color: $global-color-button;
+
+    &:hover {
+        background-color: lighten($global-color-button, 5%);
+        text-decoration: none;
+    }
+
+    &:active {
+        @include box-shadow(inset 0 0.25em 0.3em rgba(#000000, 0.2));
+
+        background-color: darken($global-color-button, 5%);
+        text-decoration: none;
+    }
+
+    &:focus {
+        @include box-shadow(0 0 4px 2px $global-color-link-focus);
+
+        border-color: $global-color-link-focus;
+        outline: 0;
+    }
+}

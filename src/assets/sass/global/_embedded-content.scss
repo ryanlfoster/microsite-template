@@ -1,0 +1,51 @@
+/* Embedded content
+   ========================================================================== */
+
+/* remove the gap between images, videos, audio and canvas and the bottom of their containers */
+audio,
+canvas,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/* correct `inline-block` display not defined in IE8-9 */
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+/* make embedded elements responsive */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* remove border when inside `<a>` element in IE8-9 */
+img {
+    border: 0;
+}
+
+/* address margin not present in IE8-9 and Safari5 */
+figure {
+    margin: 1em 0;
+}
+
+figcaption {
+    margin: 0.5em 0 0 0;
+    font-style: italic;
+}
+
+/* prevent modern browsers from displaying `<audio>` without controls, remove excess height in iOS5 devices */
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/* correct overflow displayed oddly in IE9 */
+svg:not(:root) {
+    overflow: hidden;
+}

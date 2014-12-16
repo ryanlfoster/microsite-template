@@ -1,0 +1,83 @@
+// set Compass minimum browser support and caniuse thresholds
+
+$graceful-usage-threshold:         1;
+$critical-usage-threshold:         0.1;
+$supported-browsers:               ("chrome", "firefox", "ie", "safari");
+$browser-minimum-versions:         ("chrome": "22", "firefox": "16", "ie": "8", "safari": "5");
+$debug-browser-support:            true;
+
+// use the Kellum method for hiding text
+// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+
+$hide-text-direction:             right;
+
+// font families
+
+$global-font:                     Helvetica, Arial, sans-serif;
+$global-font-mono:                Menlo, Consolas, Monaco, monospace;
+
+// typography grid
+
+$base-font-size:                  13px;
+$base-line-height:                20px;
+
+// layout grid
+
+$grid-gutter:                     2em;          // 26px / 13px
+$container-max-width:             74.4615385em; // 968px / 13px
+
+// breakpoints
+
+$breakpoint-3:                    64em;
+$breakpoint-2:                    47.6923077em;
+$breakpoint-1:                    30em;
+
+// text colours
+
+$global-color-text:               #532f00;
+$global-color-text-footnote:      #9d825f;
+$global-color-text-inverse:       #ffffff;
+
+// borders
+
+$global-color-border:             #a48d6f;
+$default-border-radius:           0.5em; // 8px / 16px
+
+// interaction colours
+
+$global-color-link:               #875323;
+$global-color-link-hover:         lighten($global-color-link, 10%);
+$global-color-link-focus:         $global-color-link-hover;
+$global-color-link-visited:       darken($global-color-link, 10%);
+$global-color-selecting:          lighten($global-color-link, 50%);
+$global-color-selected:           lighten($global-color-link, 56%);
+$global-color-button:             #532f00;
+
+// default gradients
+
+$global-color-gradient-from:      #eeeeee;
+$global-color-gradient-to:        darken($global-color-gradient-from, 6.5%);
+$global-color-gradient-border:    darken($global-color-gradient-from, 13.5%);
+
+// accent colours
+
+$global-color-background:         #ffffff;
+$global-color-background-box:     #f7f7f7;
+$global-color-highlight-box:      #fff9e1;
+$global-color-header:             #f5ebdf;
+$global-color-footer:             #f5ebdf;
+
+// alert colours
+
+$global-color-success-text:       #238c23;
+$global-color-success-background: #dff0d8;
+$global-color-success-border:     darken($global-color-success-background, 20%);
+$global-color-warning-text:       #cb8f02;
+$global-color-warning-background: #fff6d3;
+$global-color-warning-border:     darken($global-color-warning-background, 20%);
+$global-color-error-text:         #9d261d;
+$global-color-error-background:   #f2dede;
+$global-color-error-border:       darken($global-color-error-background, 12%);
+$global-color-info-text:          #3a87ad;
+$global-color-info-background:    #e7f6fc;
+$global-color-info-border:        darken($global-color-info-background, 12%);
